@@ -1,0 +1,9 @@
+[Unit]
+Description=Backs up %i
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/markovt/Documents/scripts/backup/backup.sh %I
+Restart=on-failure
+RestartSec=10min
